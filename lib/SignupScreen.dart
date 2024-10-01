@@ -34,17 +34,28 @@ class SignupScreen extends StatelessWidget {
               Form(
                   child: Column(
                 children: [
-                  CustomTextfield(
-                      hintText: "Name",
-                      controller: nameController,
-                      suffixIcon: Icon(Icons.person)),
-                  SizedBox(
-                    height: 10,
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Container(
+                        width: 180,
+                        child: CustomTextfield(
+                            hintText: "Name",
+                            controller: nameController,
+                            suffixIcon: Icon(Icons.person)),
+                      ),
+                      SizedBox(
+                        width: 10,
+                      ),
+                      Container(
+                        width: 180,
+                        child: CustomTextfield(
+                            hintText: "Email",
+                            controller: emailController,
+                            suffixIcon: Icon(Icons.email)),
+                      ),
+                    ],
                   ),
-                  CustomTextfield(
-                      hintText: "Email",
-                      controller: emailController,
-                      suffixIcon: Icon(Icons.email)),
                   SizedBox(
                     height: 10,
                   ),
